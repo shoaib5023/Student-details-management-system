@@ -1,5 +1,6 @@
 # StudentList
-# Question are given with  multiple choices to the end user,Timer has been set to answer the questions.
+
+# A sample App to add the firstname,lastname,kills of students and can sort the list by their firstnames,lastnames,skills.
 
 
 

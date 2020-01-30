@@ -1,6 +1,6 @@
 # StudentList
 
-# A sample App to add the firstname,lastname,kills of students and can sort the list by their firstnames,lastnames,skills.
+# A sample App to add the firstname,lastnameand skills of students and can sort the list by their firstnames,lastnames,skills.
 
 
 

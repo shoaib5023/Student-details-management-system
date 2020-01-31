@@ -80,5 +80,5 @@ npm start
 
 
 
-![alt text](studentlist.png)
+![alt text](https://github.com/Shoaibfy/Student-details-management-system/blob/master/studentlist.png)
 

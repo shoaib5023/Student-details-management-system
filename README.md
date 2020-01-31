@@ -1,6 +1,6 @@
-# StudentList
+# Student Data Management  Application 
 
-# A sample App to add the firstname,lastname and skills of students and can sort the list by their firstnames,lastnames,skills.
+## A sample Application to add the firstname,lastname and skills of students and can sort the list by their firstnames,lastnames and skills.
 
 
 
@@ -20,46 +20,29 @@ djangorestframework==3.11.0
 Clone the repository
 
 ```
-git clone https://github.com/Shoaibfy/Quiz_App/.git
+git clone https://github.com/Shoaibfy/Student-details-management-system/.git
 ```
 
 Setting up your virtual environment:
 
 ```
-python3 -m venv .evnv
+python3 -m venv st_en
 ```
 
 Activating Virtual  Environment
 
 ```
-source .env/bin/activate
+source st_en/bin/activate
 
 ```
-
-### Database setup
-
-If all requirements are installed, then  database must be set up.
+Create super user
 
 ```
-sudo apt install sqlite
-
-
-sqlite
-
-```
-To create a database for our Django project
-```
-CREATE DATABASE studentdb;
-
-```
-Create a database user which we will use to connect to and interact with the database. Set the password.
+Create a user database which we will use to connect interact with the database. 
 ```
 CREATE USER admin WITH PASSWORD 'admin';
 
-```
-Now, all we need to do is give our database user access rights to the database we created
-```
-GRANT ALL PRIVILEGES ON DATABASE studentdb TO admin;
+
 
 ```
 Before running server make sure all migrations done. To exucute all migration
@@ -69,21 +52,33 @@ python3 manage.py makemigrations
 
 ```
 
-## Overall detail
-```
-Database Name: quizdb
-Username: admin
-Password: admin
 
-```
 
-Then to run the server, go to the directory '/Quiz_App/quizapp' and type the following code in terminal:
+Then to run the server, go to the directory '/Student-details-management-system/backend/dstudent/' and type the following code in terminal:
 
 ```
 python3 manage.py runserver
 ```
-
 Then you can click on the sever link http://127.0.0.1:8000/
 
-you can navigate through the urls from the app.
+For Frontend which is ReactJS,
+Dependencies are: 
+```
+
+
+Go to '/Student-details-management-system/frontend/student/' and type the following code in the terminal:
+```
+
+"npm install", 
+"npm install react-axios",
+
+```
+Then to run the react server, type the code:
+```
+npm start
+```
+
+
+
+![React User Interface will look like this](studentlist.png)
 

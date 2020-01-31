@@ -80,5 +80,5 @@ npm start
 
 
 
-![React User Interface will look like this](studentlist.png)
+![alt text](studentlist.png)
 

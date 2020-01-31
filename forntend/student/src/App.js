@@ -3,9 +3,6 @@ import './App.css';
 import Axios from 'axios';
 
 
-
-
-
 class Input extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +12,12 @@ class Input extends Component {
       skills: ''
 
     }
-    // this.assignInput = this.assignInput.bind(this)
+    
   }
+
+
   assignInput=()=> {
-    // let skill=this.state.skills.split(',');
-    // let skill1=this.state;
-    //  skill1['skills']=skill;
+  
     this.props.dataSet(this.state);
     this.setState({
       firstName: '',
@@ -29,15 +26,18 @@ class Input extends Component {
 
     })
   }
-  // className="submitbutton"
+ 
 
 
   render() {
     return (
-      <div >
-        firstname: <input onChange={(event) => this.setState({ firstName: event.target.value })}></input><br />
+      <div className="border" >
+        <div className="fontsize">  Add Student Details below </div><br></br>
+
+
+        firstname: <input onChange={(event) => this.setState({ firstName: event.target.value }) }></input><br />
         lastname:<input onChange={(event) => this.setState({ lastName: event.target.value })} ></input><br />
-        skills:<input onChange={(event) => this.setState({ skills: event.target.value })}  ></input><br />
+        skills:<input onChange={(event) => this.setState({ skills: event.target.value })  }  ></input><br />
         <button onClick={this.assignInput} >Add</button>
 
       </div>
@@ -50,7 +50,7 @@ class Input extends Component {
 class Search extends Component {
   render() {
     return (
-      <div className="search" >
+      <div className="border" >
         search:<input onChange={(event) => this.props.searchInfo(event.target.value)} placeholder='enter char to filter' />
       </div>
     )
@@ -80,15 +80,16 @@ class App extends Component {
           'skills': ['Python', 'Git', 'CSS']
         }
       ],
+
        searchName: ''
     }
+
+
     this.getList = this.getList.bind(this);
     this.sortfname = this.sortfname.bind(this);
     this.sortlname = this.sortlname.bind(this);
     this.sortSkills = this.sortSkills.bind(this);
     this.searchItem = this.searchItem.bind(this);
-    // this.refresh = this.refresh.bind(this)         no need to bind fat arrow used
-
   }
 
   refresh = () => {
@@ -144,7 +145,7 @@ class App extends Component {
     })
     this.setState({
       students: sortedLastName
-    });
+    });https://github.com/Shoaibfy/Student-details-management-system/blob/master/studentlist.png
 
   }
 
@@ -175,8 +176,8 @@ class App extends Component {
   render() {
     return (
       
-            <div className='App'>
-
+            <div className='border'>
+                <div className="fontsize">  Application to store Student Details  </div><br></br>
                   <div className="add2">
                     <Search searchInfo={this.searchItem} /><br></br>
                     <div>
@@ -204,16 +205,16 @@ class App extends Component {
                       <tr key={index} >
 
 
-                        <td>{stu.firstName} </td>
-                        <td>{stu.lastName}</td>
-                        <td>{stu.skills.map((stu, index) => (
+                        <td style ={{width:40}}>{stu.firstName} </td>
+                        <td style ={{width:40}}>{stu.lastName}</td>
+                        <td style ={{width:40}}>{stu.skills.map((stu, index) => (
                           <ul key={index}>
                             <ol>{stu}</ol>
                           </ul>)
                         )}
                         </td>
                         <td><button onClick={(event)=>this.delList(stu.id)}>delete</button></td>
-                        {/* <td><button onclick={this.updateList(stu.id)}>edit</button></td> */}
+                      
 
                       </tr>
                     ))}

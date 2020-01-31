@@ -81,5 +81,16 @@ td {
   align-items: center;
   padding: 20px;
 }
-
+.border{
+  margin: 20px;
+  border: 2px solid black;
+  background-color: burlywood;
+  padding: 20px;
+}
+.fontsize{
+  margin-left: 40%;
+  color: brown;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  justify-content: center;
+}
 
